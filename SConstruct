@@ -15,7 +15,7 @@ while nodes:
 
 Rs = ' -R CategoryTheory CategoryTheory -R DataStructures DataStructures'
   # Todo: This sucks. We'd like to use "-R . ''", but this doesn't work. See Coq bug 2263.
-Rs_and_Is = Rs + ''
+Rs_and_Is = Rs + ' -I .'
 
 coqc = 'coqc -nois ' + Rs_and_Is + ' $SOURCE'
 
